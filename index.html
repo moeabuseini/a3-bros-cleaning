@@ -7,13 +7,66 @@
   <meta name="description" content="Professional residential and commercial cleaning services in Allen, TX. Book with A3 Bros Cleaning today!" />
   <title>A3 Bros Cleaning</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="file.js"></script>
 </head>
 <body>
+
+
+
+<!-------------------------------------------------NAVBAR---------------------------------------------------------------------------------------->
+<nav class = "navbar">
+    
+    <!-- left: logo + brand -->
+    <div class="nav-left">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="A3 bro's logo" class="logo-img">
+        <span class="brandName"><b>A3 Bro's Cleaning</b></span>
+      </a>
+    </div>
+
+    <!-- center: main links -->
+    <ul class="nav-center">
+ 
+      <li><a href="#">About</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <!-- right: login + demo (and mobile hamburger) -->
+    <div class = "nav-right">
+      <a href = "#" class = "loginBtn">Contact Us</a>
+      <a href = "#" class = "demoBtn">Consultation</a>
+      <button class = "menu-button" aria-label = "Open menu" onclick = "showSidebar()">☰</button>
+    </div>
+  </nav>
+
+  <!-- off-canvas sidebar for mobile -->
+  <ul class = "sidebar">
+    <li class = "close-btn"><button onclick="hideSidebar()">✕</button></li>
+    <li><a href = "#">About</a></li>
+    <li><a href = "#">Our Services</a></li>
+    <li><a href = "#">Contact Us</a></li>
+    <li><a href = "#">Consultation</a></li>
+  </ul>
+
+  <!-- functionality for sidebar -->
+  <script>
+    function showSidebar() {
+      document.querySelector('.sidebar').style.display = 'flex';
+    }
+    function hideSidebar() {
+      document.querySelector('.sidebar').style.display = 'none';
+    }
+  </script>
+<!-------------------------------------------------END OF NAVBAR---------------------------------------------------------------------------------------->
+
   <header>
-    <h1>A3 Bros Cleaning</h1>
-    <p class="tagline">We Don’t Cut Corners, We Clean Them.</p>
-  </header>
+  <h1 class="hero-heading">We Don't Cut Corners, We Clean Them</h1>
+    </header>
+
+
   <main>
+    
     <section class="about">
       <h2>About Us</h2>
       <p>We offer top-quality residential and commercial cleaning services, including standard, deep, move-in/out, and post-construction cleaning across Allen, TX and surrounding areas.</p>
@@ -28,12 +81,15 @@
         <li>Office Cleaning</li>
       </ul>
     </section>
+    
     <section class="contact">
       <h2>Contact Us</h2>
       <p>Email: <a href="mailto:info@a3broscleaning.com">info@a3broscleaning.com</a></p>
       <p>Phone: <a href="tel:7089717217">(708) 971-7217</a></p>
+   
     </section>
   </main>
+  
   <footer>
     <p>&copy; 2025 A3 Bros Cleaning. All rights reserved.</p>
   </footer>

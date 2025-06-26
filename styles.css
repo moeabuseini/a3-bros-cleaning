@@ -1,4 +1,166 @@
-/* styles.css */
+/*-----------------------------------------------------------------NAVBAR-------------------------------------------------------------------------------*/
+
+/* NAVBAR CONTAINER */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* disables horizontal scroll */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 20px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT: logo */
+.nav-left .logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-left {
+    margin-left: 1px;
+}
+
+.logo-img {
+  height: 60px;
+}
+.brandName {
+  margin-left: 10px;
+  font-size: 32px;
+  color: white;
+  font-weight: bolder;
+}
+
+/* CENTER: links */
+.nav-center {
+  display: flex;
+  list-style: none;
+  gap: 15px; /*Space between links*/
+  margin-left: auto;
+  margin-right: 20px; /* optional: gives space between links and buttons */
+
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  line-height: 80px;
+}
+.nav-center a:hover {
+  color: #35c8ed;
+}
+
+/* RIGHT: login + demo + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /*Gap between buttons*/
+}
+
+.loginBtn {
+  text-decoration: none;
+  background: #858087;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), /*allows user to have a smooth feeling when hovering over btn*/
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+
+}
+.loginBtn:hover {
+  background-color: #555; /* whatever shade you like */
+  color: #fff;
+  transform: scale(1.05); /*makes it pop up a little when hovered*/
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.demoBtn {
+  text-decoration: none;
+  background: linear-gradient(135deg, #f2720a, #000000);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-right: 50px;
+  font-weight: 500;     /* make text bolder */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), /*allows user to have a smooth feeling when hovering over btn*/
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.demoBtn:hover {
+  background: linear-gradient(135deg, #000000, #35c8ed);
+  color: #fff;
+  transform: scale(1.05); /*makes it pop up a little when hovered*/
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button { /*This is Hamburger*/
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* SIDEBAR (mobile) */
+.sidebar {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh; width: 250px;
+  background: white;
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+  list-style: none;
+  z-index: 1000;
+}
+.sidebar li + li {
+  margin-top: 10px;
+}
+.sidebar a, .sidebar button {
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  color: #white;
+  background: none;
+  border: none;
+  text-align: left;
+}
+.sidebar a:hover {
+  background: #f4f4f4;
+}
+
+/* RESPONSIVE MEDIA QUREIRES */
+@media (max-width: 800px) {
+  .nav-center { display: none; }
+  .menu-button { display: block; }
+}
+
+@media (max-width: 400px) {
+  .sidebar { width: 100px; }
+}
+/*-----------------------------------------------------------------END OF NAVBAR-------------------------------------------------------------------------------*/
+
+
+
 body {
     font-family: sans-serif;
     margin: 0;
@@ -7,15 +169,34 @@ body {
     color: #333;
   }
   header {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-  }
+  position: relative;
+  height: 100vh; /* full screen */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-heading {
+  position: absolute;
+  bottom: 0.1rem; /* move this up/down to control exact placement */
+  right: 2rem;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #35c8ed, #fff, #28a6c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ 
+
   .tagline {
     font-style: italic;
     font-size: 1.1rem;
   }
+
+  
   main {
     padding: 1.5rem;
   }
