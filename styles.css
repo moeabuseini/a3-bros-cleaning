@@ -1,21 +1,203 @@
-/* styles.css */
+/*-----------------------------------------------------------------NAVBAR-------------------------------------------------------------------------------*/
+
+/* NAVBAR CONTAINER */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* disables horizontal scroll */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 20px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT: logo */
+.nav-left .logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-left {
+    margin-left: 1px;
+}
+
+.logo-img {
+  height: 60px;
+}
+.brandName {
+  margin-left: 10px;
+  font-size: 32px;
+  color: white;
+  font-weight: bolder;
+}
+
+/* CENTER: links */
+.nav-center {
+  display: flex;
+  list-style: none;
+  gap: 15px; /*Space between links*/
+  margin-left: auto;
+  margin-right: 20px; /* optional: gives space between links and buttons */
+
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  line-height: 80px;
+}
+.nav-center a:hover {
+  color: #35c8ed;
+}
+
+/* RIGHT: login + demo + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /*Gap between buttons*/
+}
+
+.loginBtn {
+  text-decoration: none;
+  background: linear-gradient(135deg, #000000, #35c8ed);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), /*allows user to have a smooth feeling when hovering over btn*/
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border: none;
+  outline: none;
+
+
+}
+.loginBtn:hover {
+  background: linear-gradient(135deg, #f2720a, #000000);
+  color: #fff;
+  transform: scale(1.05); /*makes it pop up a little when hovered*/
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.demoBtn {
+  text-decoration: none;
+  background: linear-gradient(135deg, #f2720a, #000000);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-right: 50px;
+  font-weight: 500;     /* make text bolder */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), /*allows user to have a smooth feeling when hovering over btn*/
+              box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.demoBtn:hover {
+  background: linear-gradient(135deg, #000000, #35c8ed);
+  color: #fff;
+  transform: scale(1.05); /*makes it pop up a little when hovered*/
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button { /*This is Hamburger*/
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* SIDEBAR (mobile) */
+.sidebar {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh; width: 250px;
+  background: white;
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+  list-style: none;
+  z-index: 1000;
+}
+.sidebar li + li {
+  margin-top: 10px;
+}
+.sidebar a, .sidebar button {
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  color: #white;
+  background: none;
+  border: none;
+  text-align: left;
+}
+.sidebar a:hover {
+  background: #f4f4f4;
+}
+
+/* RESPONSIVE MEDIA QUREIRES */
+@media (max-width: 800px) {
+  .nav-center { display: none; }
+  .menu-button { display: block; }
+}
+
+@media (max-width: 400px) {
+  .sidebar { width: 100px; }
+}
+/*---------------------------------------------------------------------------------HERO SECTION-------------------------------------------------------------------------------*/
+
+
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fefefe;
-    color: #333;
-  }
+  background: linear-gradient(to bottom right #28a6c5,#f2720a);
+  color: white;
+  min-height: 100vh;
+  padding-top: 100px; /* space for sticky navbar */
+}
   header {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-  }
+  position: relative;
+  height: 100vh; /* full screen */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('images/hero.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-heading {
+  position: absolute;
+  bottom: 0.1rem; /* move this up/down to control exact placement */
+  right: 2rem;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #35c8ed, #fff, #28a6c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ 
+
   .tagline {
     font-style: italic;
     font-size: 1.1rem;
   }
+
+  
   main {
     padding: 1.5rem;
   }
@@ -26,3 +208,265 @@ body {
     font-size: 0.9rem;
   }
   
+/*---------------------------------------------------------------------------------SERVICE SECTION-------------------------------------------------------------------------------*/
+
+body {
+  background: linear-gradient(135deg, #001F2E, #00445E, #007E95);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.main-content {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-overview {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.overview-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #f2720a;
+  margin-bottom: 15px;
+}
+
+.overview-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 35px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.stat-item {
+  background: #073c4d;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #2eb4d8;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: scale(1.03);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f2720a;
+}
+
+.stat-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.locations-title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #35c8ed;
+  margin: 80px 0 40px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.location-card {
+  background: linear-gradient(145deg, #073c4d, #0c4f5e);
+  padding: 25px;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.location-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.location-description {
+  font-size: 1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+/*---------------------------------------------------------------------------------LOCATIONS SECTION-------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------LOCATIONS PAGE-------------------------------------------------------------------------------*/
+body.locations-page {
+  background: linear-gradient(135deg, #002B36, #0A3B4F);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(1, 31, 38, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 20px 40px;
+  z-index: 100;
+}
+.logo-img { height: 50px; }
+.brandName {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: #ffffffdd;
+  font-weight: bold;
+}
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.nav-center li a {
+  color: #ffffffaa;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-center li a.active,
+.nav-center li a:hover {
+  color: #35c8ed;
+}
+.nav-right {
+  display: flex;
+  gap: 15px;
+}
+.loginBtn, .demoBtn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.loginBtn {
+  background: linear-gradient(135deg, #000, #35c8ed);
+}
+.loginBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.demoBtn {
+  background: linear-gradient(135deg, #f2720a, #000);
+}
+.demoBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+.locations-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f2720a;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.location-card {
+  background: linear-gradient(to bottom right, #1e3a48, #274e5c);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* gradient border */
+.location-card::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(135deg, #35c8ed, #f2720a);
+  z-index: -1;
+  border-radius: 14px;
+}
+.location-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* HEADER */
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.location-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.tag {
+  background-color: #f2720a;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* TEXT */
+.location-card p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #d1d1d1;
+}

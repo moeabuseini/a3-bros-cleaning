@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | A3 Bros Cleaning</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-size: 800% 800%;
+      animation: bgMove 18s ease infinite;
+      color: white;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 140px 20px 80px;
+    }
+
+    .about-hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .about-hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(135deg, #35c8ed, #fff, #f2720a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .side-by-side {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+
+    .about-card {
+      flex: 1 1 48%;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 16px;
+      padding: 30px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: scale(1.015);
+    }
+
+    .about-card h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      background: linear-gradient(to right, #f2720a, #35c8ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #eaeaea;
+    }
+
+    .why-choose {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .why-choose h2 {
+      font-size: 2rem;
+      background: linear-gradient(to right, #f2720a, #35c8ed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(14px);
+      transition: transform 0.3s ease;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+    }
+
+    .feature-card:hover {
+      transform: scale(1.04);
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #35c8ed, #f2720a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature-desc {
+      font-size: 1rem;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      color: #ccc;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .side-by-side {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body >
+
+  <!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <!-- Left: logo + brand -->
+    <div class="nav-left">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="A3 bro's logo" class="logo-img">
+        <span class="brandName"><b>A3 Bro's Cleaning</b></span>
+      </a>
+    </div>
+
+    <!-- Center: main links -->
+    <ul class="nav-center">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="location.html">Locations</a></li>
+    </ul>
+
+    <!-- Right: buttons -->
+    <div class="nav-right">
+      <a href="contact.html" class="loginBtn">Contact Us</a>
+      <a href="consultation.html" class="demoBtn">Consultation</a>
+      <button class="menu-button" aria-label="Open menu" onclick="showSidebar()">☰</button>
+    </div>
+  </nav>
+
+
+  <!-- MAIN -->
+  <div class="about-container">
+    <div class="about-hero">
+    </div>
+
+    <div class="side-by-side">
+      <div class="about-card">
+        <h2>Our Mission</h2>
+        <p>At A3 Bro’s Cleaning, our mission is simple: to deliver spotless results with integrity, professionalism, and heart. We take pride in providing high-quality cleaning services that help our clients feel relaxed, refreshed, and proud of their space.</p>
+      </div>
+      <div class="about-card">
+        <h2>Who We Are</h2>
+        <p>We are a family-run business based in Allen, TX, dedicated to serving our local community with reliable and detailed cleaning services. Whether it’s a one-time deep clean or recurring appointments, we treat every space as if it were our own.</p>
+      </div>
+    </div>
+
+    <div class="why-choose">
+      <h2>Why Choose Us?</h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-title">🧹 Immaculate Standards</div>
+        <div class="feature-desc">We don’t just clean — we elevate your space to its best possible version. Every corner is checked, double-checked, and polished.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">🌱 Eco-Friendly Products</div>
+        <div class="feature-desc">We care about your health and the planet. That’s why we use environmentally responsible, non-toxic cleaning supplies.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">📅 On Your Schedule</div>
+        <div class="feature-desc">Whether it’s weekly, bi-weekly, or one-time — we’re flexible with your lifestyle. Book when it works best for you.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">💼 Home & Business</div>
+        
+
+
+
+
+
+
+
+
+    
