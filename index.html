@@ -1,4 +1,8 @@
-<!-- index.html -->
+<!-- [PRIVATE COMMENT] Wrapped primary content in <main> -->
+<!-- [PRIVATE COMMENT] Moved button link states from inline <style> into styles.css -->
+<!-- [PRIVATE COMMENT] Replaced inline sidebar JS with shared file.js -->
+<!-- [PRIVATE COMMENT] Single newline at EOF -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,33 +13,53 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>A3 Bros Cleaning</h1>
-    <p class="tagline">We Don’t Cut Corners, We Clean Them.</p>
-  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <!-- Left: logo + brand -->
+    <div class="nav-left">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="A3 bro's logo" class="logo-img">
+        <span class="brandName"><b>A3 Bro's Cleaning</b></span>
+      </a>
+    </div>
+
+    <!-- Center: main links -->
+    <ul class="nav-center">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="location.html">Locations</a></li>
+    </ul>
+
+    <!-- Right: buttons -->
+    <div class="nav-right">
+      <a href="contact.html" class="loginBtn">Contact Us</a>
+      <a href="consultation.html" class="demoBtn">Consultation</a>
+      <button class="menu-button" aria-label="Open menu" onclick="showSidebar()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <ul class="sidebar">
+    <li class="close-btn"><button onclick="hideSidebar()">✕</button></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Our Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="consultation.html">Consultation</a></li>
+  </ul>
+
   <main>
-    <section class="about">
-      <h2>About Us</h2>
-      <p>We offer top-quality residential and commercial cleaning services, including standard, deep, move-in/out, and post-construction cleaning across Allen, TX and surrounding areas.</p>
-    </section>
-    <section class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Standard Home Cleaning</li>
-        <li>Deep Cleaning</li>
-        <li>Move-In/Move-Out Cleaning</li>
-        <li>Post-Construction Cleaning</li>
-        <li>Office Cleaning</li>
-      </ul>
-    </section>
-    <section class="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:info@a3broscleaning.com">info@a3broscleaning.com</a></p>
-      <p>Phone: <a href="tel:7089717217">(708) 971-7217</a></p>
-    </section>
+    <!-------------------- HERO SECTION ---------------->
+    <header>
+      <h1 class="hero-heading">We Don't Cut Corners, We Clean Them</h1>
+    </header>
   </main>
+
+  <!---------------- FOOTER ---------------->
   <footer>
     <p>&copy; 2025 A3 Bros Cleaning. All rights reserved.</p>
   </footer>
+
+  <script src="file.js"></script>
 </body>
 </html>

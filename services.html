@@ -1,0 +1,101 @@
+<!-- [PRIVATE COMMENT] Wrapped main content in <main> -->
+<!-- [PRIVATE COMMENT] Replaced inline sidebar JS with shared file.js -->
+<!-- [PRIVATE COMMENT] Added footer for consistency -->
+<!-- [PRIVATE COMMENT] Single newline at EOF -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | A3 Bros Cleaning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-container">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="A3 bro's logo" class="logo-img">
+        <span class="brandName"><b>A3 Bro's Cleaning</b></span>
+      </a>
+    </div>
+
+    <ul class="nav-center">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="location.html">Locations</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="contact.html" class="loginBtn">Contact Us</a>
+      <a href="consultation.html" class="demoBtn">Consultation</a>
+      <button class="menu-button" aria-label="Open menu" onclick="showSidebar()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <ul class="sidebar">
+    <li class="close-btn"><button onclick="hideSidebar()">✕</button></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Our Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="consultation.html">Consultation</a></li>
+  </ul>
+
+  <!-- Services Section -->
+  <main class="main-content">
+    <section class="service-overview">
+      <h2 class="overview-title">Why Choose Us?</h2>
+      <p class="overview-description">We don’t just clean – we care. Here’s why hundreds trust A3 Bros for home and office cleaning:</p>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number orange">100+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number cyan">99%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number green">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number orange">3+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="locations-section">
+      <h2 class="locations-title">Services We Offer</h2>
+      <div class="locations-grid">
+        <div class="location-card">
+          <h3 class="location-name">🏠 Standard Cleaning</h3>
+          <p class="location-description">Keep your space fresh with scheduled maintenance — dusting, mopping, vacuuming, and more.</p>
+        </div>
+        <div class="location-card">
+          <h3 class="location-name">🧽 Deep Cleaning</h3>
+          <p class="location-description">Behind-the-scenes magic — baseboards, vents, appliances, and every hard-to-reach area.</p>
+        </div>
+        <div class="location-card">
+          <h3 class="location-name">🏢 Commercial Cleaning</h3>
+          <p class="location-description">From lobbies to restrooms, we help businesses stay clean, safe, and professional.</p>
+        </div>
+        <div class="location-card">
+          <h3 class="location-name">🛏️ Move In / Move Out</h3>
+          <p class="location-description">Vacating or moving in? We’ll make sure the place is spotless from ceiling to floor.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 A3 Bros Cleaning. All rights reserved.</p>
+  </footer>
+  <script src="file.js"></script>
+</body>
+</html>
