@@ -1,0 +1,91 @@
+<!-- [PRIVATE COMMENT] Removed duplicate NAVBAR comment -->
+<!-- [PRIVATE COMMENT] Ensured <main> wraps primary content -->
+<!-- [PRIVATE COMMENT] Added shared script include for sidebar -->
+<!-- [PRIVATE COMMENT] Added footer for consistency -->
+<!-- [PRIVATE COMMENT] Single newline at EOF -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Locations We Serve – A3 Bro's Cleaning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locations-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <!-- Left: logo + brand -->
+    <div class="nav-left">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="A3 bro's logo" class="logo-img">
+        <span class="brandName"><b>A3 Bro's Cleaning</b></span>
+      </a>
+    </div>
+
+    <!-- Center: main links -->
+    <ul class="nav-center">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="location.html">Locations</a></li>
+    </ul>
+
+    <!-- Right: buttons -->
+    <div class="nav-right">
+      <a href="contact.html" class="loginBtn">Contact Us</a>
+      <a href="consultation.html" class="demoBtn">Consultation</a>
+      <button class="menu-button" aria-label="Open menu" onclick="showSidebar()">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <h1 class="locations-title">Locations We Serve</h1>
+
+    <div class="locations-grid">
+      <div class="location-card">
+        <div class="location-header">
+          <h2>Allen, TX</h2>
+          <span class="tag">Home Base</span>
+        </div>
+        <p><strong>Population:</strong> 105,000+</p>
+        <p><strong>Zip Codes:</strong> 75002, 75013</p>
+        <p><strong>Known for:</strong> Suburbs, clean homes, loyal customers</p>
+      </div>
+
+      <div class="location-card">
+        <div class="location-header">
+          <h2>Plano, TX</h2>
+        </div>
+        <p><strong>Population:</strong> 285,000+</p>
+        <p><strong>Zip Codes:</strong> 75023, 75024, 75025, 75026</p>
+        <p><strong>Known for:</strong> Tech hub & commercial cleaning</p>
+      </div>
+
+      <div class="location-card">
+        <div class="location-header">
+          <h2>Frisco, TX</h2>
+        </div>
+        <p><strong>Population:</strong> 200,000+</p>
+        <p><strong>Zip Codes:</strong> 75033, 75034, 75035</p>
+        <p><strong>Known for:</strong> Modern homes & deep cleans</p>
+      </div>
+
+      <div class="location-card">
+        <div class="location-header">
+          <h2>McKinney, TX</h2>
+        </div>
+        <p><strong>Population:</strong> 195,000+</p>
+        <p><strong>Zip Codes:</strong> 75069, 75070, 75071</p>
+        <p><strong>Known for:</strong> Move-in/move-out cleaning</p>
+      </div>
+      <!-- add more cards here as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 A3 Bros Cleaning. All rights reserved.</p>
+  </footer>
+  <script src="file.js"></script>
+</body>
+</html>
